@@ -1,0 +1,17 @@
+import { CustomTagStyleMap, HTMLString, IExportDoc, IExportOption, Node } from './types';
+import { D_Layout, D_TagStyleMap } from './default';
+import { Document, Paragraph } from 'docx';
+import { tableNodeToITableOptions } from './builder/table';
+import { parse } from 'html-to-ast';
+export declare const getInnerTextNode: (node: Node) => Node;
+export declare const chainStyle: (nodeList: Node[], style?: string[], tagStyleMap?: CustomTagStyleMap) => void;
+export declare const StyleBuilder: (list: Node[], tagStyleMap?: CustomTagStyleMap) => Node[];
+export declare const ElementCreator: (astList: Node[], tagStyleMap?: CustomTagStyleMap) => Promise<Paragraph[]>;
+export declare const htmlToAST: (html: string) => Node[];
+export declare const genDocument: (html: HTMLString, options?: IExportOption | undefined) => Promise<Document>;
+export declare const exportAsDocx: (doc: Document, docName?: string) => Promise<void>;
+export declare const exportHtmlToDocx: (html: HTMLString, docName?: string, options?: IExportOption | undefined) => Promise<Document>;
+export declare const exportMultiDocsAsZip: (docList: IExportDoc[], fileName?: string, export_option?: IExportOption | undefined) => Promise<void>;
+export declare const exportAsZip: (docList: IExportDoc[], fileName?: string, export_option?: IExportOption | undefined) => Promise<void>;
+export { IExportDoc, IExportOption };
+export { parse, tableNodeToITableOptions, D_Layout, D_TagStyleMap };

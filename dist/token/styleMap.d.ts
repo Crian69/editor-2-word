@@ -1,0 +1,22 @@
+export declare const StyleMap: {
+    fontFamily: string;
+    textAlign: string;
+    paddingRight: string;
+    paddingLeft: string;
+    lineHeight: string;
+    fontSize: string;
+    color: string;
+    backgroundColor: string;
+    textDecoration: string;
+    textIndent: string;
+    borderColor: string;
+    height: string;
+    width: string;
+    fontWeight: string;
+    verticalAlign: string;
+    lineThrough: string;
+    underline: string;
+    fontStyle: string;
+    subScript: string;
+    superScript: string;
+};
